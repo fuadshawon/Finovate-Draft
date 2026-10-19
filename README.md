@@ -1,100 +1,60 @@
-# Finovate Accountancy - Web Platform & Client Booking Hub
+# Finovate Accountancy - Standalone HTML Platform & Client Booking Hub
 
-A modern, high-converting web platform and client appointment booking portal for **Finovate Accountancy**, led by qualified accountant **Tamima Chowdhury AFA MIPA**.
+A modern, standalone, zero-dependency HTML website and appointment booking hub for **Finovate Accountancy**, led by qualified accountant **Tamima Chowdhury AFA MIPA**.
 
-Built with React 19, TypeScript, Vite, and Tailwind CSS v4, styled in the signature **Montserrat** font family and brand palette.
+Built in **pure HTML5 + Tailwind CSS + Vanilla JavaScript**, styled with Google Fonts **Montserrat**.
+
+---
+
+## Zero Build Requirements (Double-Click & Run)
+
+This build is **100% static HTML**:
+- **No Node.js, npm, or build step required**: You can open `index.html` directly in any web browser by double-clicking it.
+- **Ready for GitHub Pages**: Push this folder to a GitHub repository, enable GitHub Pages in Settings, and your live website is up immediately.
+- **Ready for cPanel, Netlify, or Vercel**: Upload `index.html` and the `assets/` folder to any static hosting provider.
 
 ---
 
 ## Features
 
 - **Branded Design System**: Matching Finovate Accountancy's visual identity, logo mark, and colour palette (Spruce Teal `#0C2D2B`, Muted Sage `#3F7A74`, Warm Ochre `#E5A853`).
-- **Dedicated Calendar & Booking Hub**:
-  - Direct 4-step consultation scheduler (Phone, Video, In-Person).
-  - 1-click **Add to Google Calendar** and **Download .ICS (Outlook/Apple Calendar)**.
-  - Dedicated slot for **Calendly / Cal.com embed** or booking API integration.
-- **Fast 30-Second Callback Request**: Captures mobile and immediate inquiries.
-- **Recent Updates & Regulatory Live Feed**: Displays dynamic snippets from HMRC alerts, LinkedIn, e-commerce compliance, and practice news with interactive categories and social actions.
+- **Interactive Appointment Booking Hub**:
+  - Direct 4-step consultation scheduler (Phone, Video, or In-Person at 12 Parker Avenue, Tilbury RM18 8JA).
+  - One-click **Add to Google Calendar** and **Download .ICS (Outlook / Apple Calendar)** calendar file.
+  - Designated slot for **Calendly / Cal.com API embed** with interactive toggle.
+- **Fast 30-Second Callback Request**: Hero callback card capturing immediate inquiries.
+- **Recent Updates & Regulatory Live Feed**: Displays dynamic snippets from HMRC alerts, LinkedIn, e-commerce compliance, and practice news with interactive category filters, like counters, and share links.
 - **12 Comprehensive Accountancy Services**: Bookkeeping, Accounting, Tax Services, Tax Returns, Management Accounts, Landlord Services, Personal Tax Returns, MTD Quarterly Returns, Online Trader Support (Amazon/Shopify/TikTok Shop), Free Companies House Identity Verification (ACSP), HR Services, and Financial Planning.
 - **Direct WhatsApp Chat Integration**: Click-to-chat with Tamima on `07932 869 761`.
-- **UK Tax Deadlines Tracker**: Highlights key HMRC deadlines (Self Assessment, Corporation Tax, VAT).
+- **UK Tax Deadlines Tracker**: Highlights key HMRC deadlines (Self Assessment, Corporation Tax, VAT, Annual Accounts).
 - **Zero Pricing Friction**: Directs all prospects to the free 30-minute consultation call to discuss personalized packages directly.
+- **Strict Privacy**: Zero API keys or secrets exposed.
 
 ---
 
-## Getting Started
+## Publishing to GitHub Pages in 3 Steps
 
-### Prerequisites
+1. **Unzip the downloaded `finovate-html-only.zip`**:
+   ```bash
+   unzip finovate-html-only.zip
+   ```
 
-- **Node.js** v18+ or v20+
-- **npm** or **bun** / **yarn**
-
-### 1. Installation
-
-Clone or extract the repository, navigate into the directory, and install dependencies:
-
-```bash
-npm install
-```
-
-### 2. Environment Variables
-
-Create a local `.env` file from the provided `.env.example`:
-
-```bash
-cp .env.example .env
-```
-
-> **Security Note:** Never commit your `.env` file with actual API secrets to public repositories. `.gitignore` is already pre-configured to ignore all `.env*` files except `.env.example`.
-
-### 3. Running Locally
-
-Start the Vite development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) or [http://localhost:5173](http://localhost:5173) in your browser.
-
-### 4. Building for Production
-
-Compile and bundle the production assets:
-
-```bash
-npm run build
-```
-
-The compiled output will be generated in the `/dist` directory, ready to deploy.
-
----
-
-## Publishing to GitHub
-
-To push this codebase to a new repository on your GitHub account:
-
-1. **Initialize Git** (if not already initialized):
+2. **Push to a new GitHub repository**:
    ```bash
    git init
    git add .
-   git commit -m "Initial commit of Finovate Accountancy website"
-   ```
-
-2. **Link to your GitHub Repository**:
-   Create a new empty repository on [GitHub](https://github.com/new), then run:
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/finovate-accountancy.git
+   git commit -m "Initial commit of Finovate Accountancy HTML website"
    git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/finovate-accountancy.git
    git push -u origin main
    ```
 
----
-
-## 1-Click Deployment Options
-
-- **Vercel**: Import your GitHub repository into Vercel; framework preset auto-detects as Vite.
-- **Netlify**: Connect repository, set build command to `npm run build` and publish directory to `dist`.
-- **Cloudflare Pages / GitHub Pages**: Deploy the `dist` folder directly.
+3. **Enable GitHub Pages**:
+   - Go to your repository on GitHub.
+   - Navigate to **Settings** > **Pages**.
+   - Under **Build and deployment**, set Source to **Deploy from a branch**.
+   - Select Branch: `main` / Folder: `/ (root)`, and click **Save**.
+   - Your site will be live at `https://YOUR_USERNAME.github.io/finovate-accountancy/`!
 
 ---
 
