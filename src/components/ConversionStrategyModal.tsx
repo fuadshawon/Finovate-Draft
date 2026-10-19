@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Lightbulb, TrendingUp, CheckCircle, Zap, Shield, Sparkles, Calendar, MessageSquare } from 'lucide-react';
+import { X, Lightbulb, TrendingUp, CheckCircle, Zap, Shield, Sparkles, Calendar, MessageSquare, Download } from 'lucide-react';
 
 interface ConversionStrategyModalProps {
   onClose: () => void;
@@ -69,6 +69,35 @@ export const ConversionStrategyModal: React.FC<ConversionStrategyModalProps> = (
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Here are actionable recommendations to maximize the effectiveness of the Finovate Accountancy platform and streamline client acquisition:
           </p>
+
+          {/* GitHub ZIP Download Card */}
+          <div className="bg-[#0C2D2B] text-white rounded-2xl p-5 border border-[#2B5450] space-y-3">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <Download className="w-5 h-5 text-[#E5A853]" />
+                <span className="font-bold text-sm">Download GitHub-Ready ZIP Archive</span>
+              </div>
+              <span className="text-[10px] font-semibold bg-[#3F7A74] px-2 py-0.5 rounded text-white">
+                Clean · No API Keys
+              </span>
+            </div>
+            <p className="text-xs text-slate-300 leading-relaxed">
+              Contains the complete React + TypeScript + Vite codebase with all assets, Montserrat font configuration, Calendly API integration slot, and README.md with push instructions. Real API keys and secrets are excluded per GitHub security guidelines.
+            </p>
+            <div className="flex flex-wrap items-center gap-2.5 pt-1">
+              <a
+                href="/finovate-accountancy.zip"
+                download="finovate-accountancy.zip"
+                className="bg-[#E5A853] hover:bg-[#D99436] text-[#1A1813] font-bold text-xs py-2.5 px-4 rounded-xl inline-flex items-center gap-2 transition-all shadow-xs cursor-pointer active:scale-95"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download finovate-accountancy.zip (2.2 MB)</span>
+              </a>
+              <span className="text-[11px] text-slate-400">
+                Ready to push to GitHub / Vercel / Netlify
+              </span>
+            </div>
+          </div>
 
           <div className="space-y-3.5 pt-2">
             {suggestions.map((item, idx) => (
